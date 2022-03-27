@@ -22,7 +22,7 @@ switch ($page) {
         UserRouter::route($method);
         break;
     case 'message':
-       MessageRouter::route($method);
+        MessageRouter::route($method);
         break;
     case 'api':
         ApiRouter::route($method);

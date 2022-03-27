@@ -3,7 +3,7 @@
 namespace App\Routing;
 
 use AbstractRouter;
-use App\Controller\MessageController;
+use App\Controller\Api\MessageController;
 
 class ApiRouter extends AbstractRouter
 {

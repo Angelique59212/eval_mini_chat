@@ -106,3 +106,13 @@ input {
     padding: 1rem;
 }
 
+@media screen and (max-width: 610px){
+    #login, #register {
+        width: 60%;
+    }
+
+    #discussion, #log-discussion {
+        width: 35%;
+    }
+}
+
