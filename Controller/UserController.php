@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Controller;
+
+use AbstractController;
 use App\Model\Entity\User;
 use App\Model\Manager\UserManager;
 

@@ -1,13 +1,15 @@
 <?php
 
+namespace App\Controller;
+
 class ErrorController
 {
-
-    public function __construct()
+    /**
+     * @param string $askPage
+     * @return void
+     */
+    public function error404(string $askPage)
     {
-    }
-
-    public function error404(int $param)
-    {
+        require __DIR__ . '/../View/error/404.html.php';
     }
 }

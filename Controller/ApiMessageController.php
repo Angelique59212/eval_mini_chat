@@ -1,6 +1,12 @@
 <?php
 
-class MessageApiController extends AbstractController
+namespace App\Controller;
+
+use AbstractController;
+use App\Model\Entity\Message;
+use App\Model\Manager\MessageManager;
+
+class ApiMessageController extends AbstractController
 {
 
     /**
@@ -28,21 +34,20 @@ class MessageApiController extends AbstractController
 
         $content = $this->dataClean($payload->content);
 
-        $user = self::getConnectedUser();
+        $user = self::verifyUserConnect();
         $message = (new Message())
             ->setContent($content);
+
 
 
         if (MessageManager::addNewMessage($message)) {
             echo json_encode([
                 'id'=>$message->getId(),
                 'content'=>$message->getContent(),
+                'author'=>$message->getAuthor()->getFirstname(),
             ]);
             http_response_code(200);
             exit();
         }
-
-        http_response_code(200);
-        exit();
     }
 }

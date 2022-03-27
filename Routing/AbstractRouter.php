@@ -1,6 +1,8 @@
 <?php
 
 
+use App\Controller\ErrorController;
+
 abstract class AbstractRouter
 {
     /**

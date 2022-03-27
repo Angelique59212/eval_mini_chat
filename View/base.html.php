@@ -4,6 +4,9 @@
         <i class="fas fa-bars"></i>
         <ul>
             <?php
+
+            use App\Controller\UserController;
+
             if (!UserController::verifyUserConnect()) { ?>
                 <li><a href="/index.php?c=home">Home</a></li>
                 <li><a href="/index.php?c=user&a=register">S'enregistrer</a></li>
@@ -26,7 +29,8 @@
 </main>
 
 <script src="https://kit.fontawesome.com/6167e09880.js" crossorigin="anonymous"></script>
-<script src="/assets/js/message.js"></script>
 <script src="/assets/js/app.js"></script>
+<script src="/assets/js/message.js"></script>
+
 </body>
 </html>

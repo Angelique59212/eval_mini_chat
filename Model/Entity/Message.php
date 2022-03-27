@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Model\Entity;
+
+use AbstractEntity;
 use App\Model\Entity\User;
 
 class Message extends AbstractEntity

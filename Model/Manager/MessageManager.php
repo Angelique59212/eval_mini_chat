@@ -1,5 +1,10 @@
 <?php
 
+namespace App\Model\Manager;
+
+use Connect;
+use App\Model\Entity\Message;
+
 class MessageManager
 {
     public const TABLE = 'mdf58_message';
@@ -12,7 +17,6 @@ class MessageManager
         $messages = [];
         $query = Connect::dbConnect()->query("SELECT * FROM " . self::TABLE);
         if ($query) {
-
             foreach ($query->fetchAll() as $messageData) {
                 $messages[] = (new Message())
                     ->setId($messageData['id'])
@@ -21,7 +25,6 @@ class MessageManager
         }
         return $messages;
     }
-
 
     /**
      * Add message in db.

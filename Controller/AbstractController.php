@@ -75,15 +75,6 @@ abstract class AbstractController
         }
     }
 
-    public function getConnectedUser(): ?User
-    {
-        if(!self::verifyUserConnect()) {
-            return null;
-        }
-
-        return ($_SESSION['user']);
-    }
-
     /**
      * sanitize data
      * @param $data

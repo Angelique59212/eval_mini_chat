@@ -1,11 +1,17 @@
 <?php
 
+namespace App\Routing;
+
+use AbstractRouter;
+use App\Controller\ErrorController;
+use App\Controller\ApiMessageController;
+
 class MessageRouter extends AbstractRouter
 {
     public static function route(?string $action = null)
     {
         $errorController = new ErrorController();
-        $controller = new MessageApiController();
+        $controller = new ApiMessageController();
 
         if(null === $action) {
             $errorController->error404($action);

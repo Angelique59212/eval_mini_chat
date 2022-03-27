@@ -1,13 +1,17 @@
 <?php
 
-class HomeController
+namespace App\Controller;
+
+use AbstractController;
+
+class HomeController extends AbstractController
 {
 
-    public function __construct()
-    {
-    }
-
+    /**
+     * @return void
+     */
     public function index()
     {
+        $this->render('home/index');
     }
 }

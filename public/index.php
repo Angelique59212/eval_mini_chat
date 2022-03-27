@@ -1,5 +1,7 @@
 <?php
 
+use App\Controller\ErrorController;
+
 require __DIR__ . '/../include.php';
 session_start();
 

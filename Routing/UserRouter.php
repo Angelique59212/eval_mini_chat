@@ -1,5 +1,11 @@
 <?php
 
+namespace App\Routing;
+
+use AbstractRouter;
+use App\Controller\ErrorController;
+use App\Controller\UserController;
+
 class UserRouter extends AbstractRouter
 {
     public static function route(?string $action = null)
