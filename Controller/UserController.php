@@ -59,7 +59,7 @@ class UserController extends AbstractController
                         $_SESSION['success'] = "Compte activé";
                         $user->setPassword('');
                         $_SESSION['user'] = $user;
-                        header("Location: index.php/?c=home");
+
                     }
                     else {
                         $_SESSION['errors'] = ["Erreur d'enregistrement"];
@@ -68,6 +68,7 @@ class UserController extends AbstractController
                 else {
                     $_SESSION['errors'] = ["Adresse mail déjà existante"];
                 }
+                header("Location: index.php/?c=home");
             }
 
         }
