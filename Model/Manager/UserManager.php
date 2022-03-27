@@ -75,7 +75,7 @@ class UserManager
      */
     public static function getUserByMail(string $mail): ?User
     {
-        $stmt = Connect::dbConnect()->prepare("SELECT * FROM " . self::TABLE . " WHERE email = :email ");
+        $stmt = Connect::dbConnect()->prepare("SELECT * FROM " . self::TABLE . " WHERE email = :mail ");
         $stmt->bindParam(':mail', $mail);
         return $stmt->execute() ? self::makeUser($stmt->fetch()) : null;
     }

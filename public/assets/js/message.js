@@ -1,4 +1,4 @@
-const sendMessage = document.querySelector('#save-content');
+const sendMessage = document.querySelector('#add-message');
 
 if (sendMessage) {
     sendMessage.addEventListener('click', () => {
@@ -14,12 +14,11 @@ if (sendMessage) {
         xhr.onload = function () {
             if (xhr.status === 404) {
                 alert('Aucun enpoint trouvé !');
-                return;
-            } else if (xhr.status === 400) {
-                alert('Un paramètre est manquant');
-                return;
             }
-
-            xhr.send(JSON.stringify(body));
+            else if (xhr.status === 400) {
+                alert('Un paramètre est manquant');
+            }
         }
+        xhr.send(JSON.stringify(body));
+    });
 }

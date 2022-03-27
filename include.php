@@ -17,6 +17,7 @@ require __DIR__ . '/Controller/ApiMessageController.php';
 require __DIR__ .'/Controller/UserController.php';
 
 require __DIR__ .'/Routing/AbstractRouter.php';
+require __DIR__ .'/Routing/ApiRouter.php';
 require __DIR__ .'/Routing/HomeRouter.php';
 require __DIR__ .'/Routing/MessageRouter.php';
 require __DIR__ .'/Routing/UserRouter.php';

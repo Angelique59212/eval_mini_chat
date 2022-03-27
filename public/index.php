@@ -1,6 +1,10 @@
 <?php
 
 use App\Controller\ErrorController;
+use App\Routing\ApiRouter;
+use App\Routing\HomeRouter;
+use App\Routing\MessageRouter;
+use App\Routing\UserRouter;
 
 require __DIR__ . '/../include.php';
 session_start();
@@ -17,7 +21,12 @@ switch ($page) {
     case 'user':
         UserRouter::route($method);
         break;
-
+    case 'message':
+       MessageRouter::route($method);
+        break;
+    case 'api':
+        ApiRouter::route($method);
+        break;
     default:
         (new ErrorController())->error404($page);
 }

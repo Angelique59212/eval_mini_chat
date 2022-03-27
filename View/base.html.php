@@ -1,4 +1,3 @@
-?>
 <header>
     <nav class="menu">
         <i class="fas fa-bars"></i>
@@ -13,7 +12,7 @@
                 <li><a href="/index.php?c=user&a=connected">Se Connecter</a></li><?php
             } else { ?>
                 <li><a href="/index.php?c=home">Home</a></li>
-                <li><a href="/index.php?c=article&a=list-article">Messages</a></li>
+                <li><a href="/index.php?c=message&a=add-message">Messages</a></li>
                 <li><a href="/index.php?c=user&a=disconnected">Se déconnecter</a></li><?php
             }
 
