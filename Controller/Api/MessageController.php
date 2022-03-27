@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Api;
+
 
 use AbstractController;
 use App\Model\Entity\Message;
 use App\Model\Manager\MessageManager;
 
-class ApiMessageController extends AbstractController
+class MessageController extends AbstractController
 {
 
     /**

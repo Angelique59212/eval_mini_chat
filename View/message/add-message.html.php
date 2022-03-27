@@ -1,8 +1,15 @@
-<h1>Ajouter un message.</h1>
+<?php
+if (!isset($_SESSION['user'])) {
+header('Location: index.php');
+}?>
 
-<!--<div>-->
-<!--    <label for="content-message"></label>-->
-<!--    <textarea name="content" id="content-message" cols="30" rows="20"></textarea>-->
-<!--</div>-->
-<!---->
-<!--<button id="add-message">Envoyer</button>-->
+<h1>Chat</h1>
+
+<div>
+    <label for="content-message"></label>
+    <textarea name="content" id="content-message" cols="30" rows="20"></textarea>
+    <input type="submit" name="save" id="add-message">
+</div>
+
+
+
