@@ -1,7 +1,7 @@
 <h1>Créer un compte</h1>
 
-<div>
-    <form action="/index.php?c=user&a=register" onsubmit="return validateForm()" method="post" name="formRegister">
+<div id="form-register">
+    <form action="/index.php?c=user&a=register" onsubmit="return validateForm()" method="post" name="formRegister" id="register">
         <div>
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email">
@@ -23,4 +23,8 @@
 
         <input type="submit" value="Créer un compte" name="save" class="save">
     </form>
+</div>
+
+<div id="chat-computer">
+    <img id="log-discussion" src="/assets/img/chat-computer.png" alt="discussion-chat">
 </div>

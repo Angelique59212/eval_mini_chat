@@ -11,16 +11,19 @@ body {
 
 #container-cat {
     display: flex;
+    border: 1px solid antiquewhite;
     align-items: center;
     justify-content: center;
+    margin-top: 5rem;
 }
 
-#cat {
-    width: 15%;
+.menu {
+    border: 1px solid antiquewhite;
 }
 
-a {
-    color: black;
+h1 {
+    text-align: center;
+    margin-top: 4rem;
 }
 
 .menu > i:first-child {
@@ -31,4 +34,75 @@ a {
     display: inline-block;
     padding: 1rem;
     float: right;
+
 }
+
+#cat {
+    width: 15%;
+}
+
+a {
+    color: black;
+}
+
+#container-social {
+   text-align: center;
+}
+
+.social-networks {
+    width:25rem;
+    height:20rem;
+    border:5px solid #337AB7;
+}
+
+.alert {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    border-bottom: 1px solid #FEFEFE;
+}
+
+.alert-error {
+    background-color: indianred;
+}
+
+.alert-success {
+    background-color: darkseagreen;
+}
+
+#form-register, #form-login, #container-discussion, #chat-computer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#register, #login {
+    margin-top: 2rem;
+    text-align: center;
+    border: 1px solid black;
+    width: 30%;
+    background-color: #b5ccdf;;
+    padding: 1rem;
+}
+
+input {
+    margin: 0.4rem;
+}
+
+#log-discussion {
+    width: 25%;
+    padding: 1rem;
+}
+
+#discussion {
+    width: 35%;
+    padding: 1rem;
+}
+

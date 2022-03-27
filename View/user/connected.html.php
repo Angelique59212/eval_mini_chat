@@ -1,7 +1,7 @@
 <h1>Connexion</h1>
 
-<div>
-    <form action="/index.php?c=user&a=connected" method="post">
+<div id="form-login">
+    <form action="/index.php?c=user&a=connected" method="post" id="login">
         <div>
             <label for="email">E-mail</label>
             <input type="text" name="email" id="email" required>
@@ -13,4 +13,8 @@
 
         <input type="submit" value="Se connecter" name="save" class="save">
     </form>
+</div>
+
+<div id="container-discussion">
+    <img id="discussion" src="/assets/img/discussion.jpg" alt="discussion-chat">
 </div>
