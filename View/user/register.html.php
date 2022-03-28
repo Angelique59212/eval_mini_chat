@@ -4,20 +4,20 @@
     <form action="/index.php?c=user&a=register" onsubmit="return validateForm()" method="post" name="formRegister" id="register">
         <div>
             <label for="email">E-mail</label>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" required>
         </div>
         <div>
             <label for="firstname">First name</label>
-            <input type="text" name="firstname" id="firstname">
+            <input type="text" name="firstname" id="firstname" required>
         </div>
         <div>
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" required>
             </div>
             <div>
                 <label for="password-repeat">Password repeat</label>
-                <input type="password" name="password-repeat" id="password-repeat">
+                <input type="password" name="password-repeat" id="password-repeat" required>
             </div>
         </div>
 
