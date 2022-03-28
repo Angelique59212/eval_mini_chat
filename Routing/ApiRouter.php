@@ -3,7 +3,7 @@
 namespace App\Routing;
 
 use AbstractRouter;
-use App\Controller\Api\MessageController;
+use App\Controller\Api\ApiController;
 
 class ApiRouter extends AbstractRouter
 {
@@ -13,7 +13,7 @@ class ApiRouter extends AbstractRouter
         switch($action)
         {
             case 'add-message':
-                (new MessageController())->addMessage();
+                (new ApiController())->addMessage();
                 break;
             default:
                 http_response_code(404);

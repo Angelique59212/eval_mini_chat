@@ -34,12 +34,12 @@ class MessageManager
     public static function addNewMessage(Message &$message): bool
     {
         $stmt = Connect::dbConnect()->prepare("
-            INSERT INTO " . self::TABLE . " (content, user_fk)
-            VALUES (:content, :user_fk)
+            INSERT INTO " . self::TABLE . " (content, mdf58_user_fk)
+            VALUES (:content, :mdf58_user_fk)
         ");
 
-        $stmt->bindParam(':content', $content);
-        $stmt->bindParam('user_fk', $id);
+        $stmt->bindValue(':content', $message->getContent());
+        $stmt->bindValue(':mdf58_user_fk', $message->getAuthor()->getId());
 
 
         $result = $stmt->execute();

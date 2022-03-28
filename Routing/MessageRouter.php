@@ -3,7 +3,7 @@
 namespace App\Routing;
 
 use AbstractRouter;
-use App\Controller\Api\MessageController;
+use App\Controller\MessageController;
 use App\Controller\ErrorController;
 
 
@@ -22,8 +22,8 @@ class MessageRouter extends AbstractRouter
             case 'index':
                 $controller->index();
                 break;
-            case 'add-message':
-                $controller->addMessage();
+            case 'find-all':
+                $controller->findAll();
                 break;
             default:
                 $errorController->error404($action);

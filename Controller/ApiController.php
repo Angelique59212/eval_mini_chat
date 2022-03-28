@@ -7,7 +7,7 @@ use AbstractController;
 use App\Model\Entity\Message;
 use App\Model\Manager\MessageManager;
 
-class MessageController extends AbstractController
+class ApiController extends AbstractController
 {
 
     /**
@@ -36,16 +36,17 @@ class MessageController extends AbstractController
         $content = $this->dataClean($payload->content);
 
         $user = self::verifyUserConnect();
+        $currentUser = $_SESSION['user'];
+
         $message = (new Message())
+            ->setAuthor($currentUser)
             ->setContent($content);
-
-
 
         if (MessageManager::addNewMessage($message)) {
             echo json_encode([
                 'id'=>$message->getId(),
-                'content'=>$message->getContent(),
                 'author'=>$message->getAuthor()->getFirstname(),
+                'content'=>$message->getContent(),
             ]);
             http_response_code(200);
             exit();
