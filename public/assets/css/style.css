@@ -26,6 +26,13 @@ h1 {
     margin-top: 4rem;
 }
 
+#rule {
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
 .menu > i:first-child {
     display: none;
 }
@@ -116,3 +123,57 @@ input {
     }
 }
 
+#container-chat {
+    width: 50%;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: #a1c4e3;
+}
+
+#container-message, #container-response {
+    width: 70%;
+    border: 1px solid black;
+    margin: 2rem auto;
+    background-color: #b5ccdf;
+}
+
+.message, .message-content {
+    text-align: center;
+}
+
+.message-content {
+    border-bottom: 1px dashed black;
+}
+
+#content-message {
+    background-color: #d0dde8;
+    display: block;
+    margin: 0 auto;
+
+}
+
+
+#add-message {
+    padding: 0.4rem;
+}
+
+textarea + div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container-message {
+    height: 30rem;
+    overflow: auto;
+}
+
+textarea {
+    width: 70%;
+}
+
+@media screen and (max-width: 680px) {
+    #container-chat {
+        width: 100%;
+    }
+
+}

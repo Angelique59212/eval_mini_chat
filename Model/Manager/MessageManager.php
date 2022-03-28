@@ -15,11 +15,12 @@ class MessageManager
     public static function findAll(): array
     {
         $messages = [];
-        $query = Connect::dbConnect()->query("SELECT * FROM " . self::TABLE);
+        $query = Connect::dbConnect()->query("SELECT * FROM " . self::TABLE ." LIMIT 100 ");
         if ($query) {
             foreach ($query->fetchAll() as $messageData) {
                 $messages[] = (new Message())
                     ->setId($messageData['id'])
+                    ->setAuthor($_SESSION['user'])
                     ->setContent($messageData['content']);
             }
         }
@@ -40,7 +41,6 @@ class MessageManager
 
         $stmt->bindValue(':content', $message->getContent());
         $stmt->bindValue(':mdf58_user_fk', $message->getAuthor()->getId());
-
 
         $result = $stmt->execute();
         $message->setId(Connect::dbConnect()->lastInsertId());

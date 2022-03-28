@@ -2,13 +2,9 @@
 
 use App\Model\Entity\Message;
 
-if (!isset($_SESSION['user'])) {
-header('Location: index.php');
-}
-
 if (isset($data['messages'])) {
     $messages = $data['messages'];
-}?>
+} ?>
 
 <h1>Chat</h1>
 
@@ -17,8 +13,8 @@ if (isset($data['messages'])) {
         <?php
         foreach ($messages as $message) {
             /* @var Message $message */ ?>
-            <p><?= $message->getAuthor()->getFirstname() ?></p>
-            <p><?= $message->getContent() ?></p><?php
+            <p class="message"><?= $message->getAuthor()->getFirstname() ?></p>
+            <p class="message-content"><?= $message->getContent() ?></p><?php
         }
         ?>
     </div>
@@ -26,7 +22,11 @@ if (isset($data['messages'])) {
     <div id="container-response">
         <label for="content-message"></label>
         <textarea name="content" id="content-message" cols="30" rows="20"></textarea>
-        <input type="submit" name="save" id="add-message">
+        <div>
+            <div>
+                <input type="submit" name="save" id="add-message">
+            </div>
+        </div>
     </div>
 </div>
 

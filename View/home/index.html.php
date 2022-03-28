@@ -6,6 +6,8 @@
         <img id="cat" src="/assets/img/logo.png" alt="chat">
 </div>
 
+<p id="rule">Pour accéder au Chat, veuillez vous enregistrez ou vous connectez</p>
+
 <div id="container-social">
     <a href="https://www.facebook.com/settings?tab=account&section=username" target="_blank">
         <img class="social-networks" src="/assets/img/log-fb.png" alt="facebook">

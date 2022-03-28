@@ -39,6 +39,7 @@ if (sendMessage) {
 function printChat(messages) {
     containerMessage.innerHTML = '';
     for (let i = 0; i < messages.length; i++) {
-        containerMessage.innerHTML += "<p>" + messages[i]['author'] + "</p>" + "<p>" + messages[i]['content'] + "</p>";
+        containerMessage.innerHTML += "<p class='message'>" + messages[i]['author'] + "</p>" + "<p class='message-content'>"
+            + messages[i]['content'] + "</p>";
     }
 }

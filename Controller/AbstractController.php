@@ -68,7 +68,7 @@ abstract class AbstractController
     /**
      * @return void
      */
-    public  function redirectIfNotConnected():void
+    public function redirectIfNotConnected():void
     {
         if(!self::verifyUserConnect()) {
             $this->render('home/index');

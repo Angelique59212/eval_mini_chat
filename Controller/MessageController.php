@@ -10,6 +10,9 @@ class MessageController extends AbstractController
 {
     public function index()
     {
+        if (!isset($_SESSION['user'])) {
+            $this->render('user/connected');
+        }
         $this->render('message/add-message',[
                 'messages' => MessageManager::findAll(),
             ]);
